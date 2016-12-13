@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+        <meta content="IE-edge" http-equiv="X-UA-Compatible" />
+        <title>RMSys - Sign In</title>
+        <script src="/Scripts/RMSys/RedirectRouting.js"></script>
+
+        <link rel="stylesheet" href="/Content/css/jquery-custom-theme/jquery-ui-1.8.21.custom.css" />
+<link rel="stylesheet" href="/Content/css/rmsys/Master.css" />
+<link rel="stylesheet" href="/Content/css/jquery-custom-theme/ui.datepicker.css" />
+<link rel="stylesheet" href="/Content/css/rmsys/Login.css" />
+
+        <script src="/Scripts/jquery-1.9.1.js"></script>
+<script src="/Scripts/jquery-ui.js"></script>
+<script src="/Scripts/migrateScript.js"></script>
+<script src="/Scripts/jquery.textshadow.js"></script>
+<script src="/Scripts/RMSys/CheckBrowser.js"></script>
+
+        <script src="/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script src="/Scripts/jquery.validate.js"></script>
+<script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+
+        <script src="/Scripts/RMSys/AutentificationError.js"></script>
+
+        
+        
+
+        <script type="text/javascript">
+            // temporary disabled until rmsys mobile is fully ready
+            //setupRedirectToMobile('https://192.168.100.26:11119');
+        </script>
+    </head>
+<body>
+    <div class="main" id="main_div">
+        
+<script src="/Scripts/RMSys/SignIn.js"></script>
+
+
+
+<div class="login-form-container">
+<form method="post" action="/?enctype=multipart%2Fform-data&amp;id=SignInForm">        <div class="form-container">
+            <div class="logo-container"></div>
+            <div class="authentication-container">
+                <div>
+                    <div class="sign-in-validation validation-box" id="user-box-validation">
+                        <span data-valmsg-replace="true" data-valmsg-for="Username" class="field-validation-valid"></span>
+                    </div>
+                    <div class="editor-field" id="user-box">
+                        <input type="text" value="" placeholder="Username" name="Username" id="Username" data-val-required="Username is required" data-val-regex-pattern="^[A-Za-z0-9\._\-]{1,}$" data-val-regex="Invalid Username" data-val="true" class="valid" />
+                        <select name="Domain" id="Domain"><option>BY-MINSK</option>
+<option>US-MPLS</option>
+</select>
+                        <div id="user-domain">
+                                <ul class="domains">
+            <li class="current-domain">
+                <span id="Domains" name="Domains">BY-MINSK</span>
+            </li>
+            <li class="last-domain">
+                <span id="Domains" name="Domains">US-MPLS</span>
+            </li>
+    </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="sign-in-validation validation-box" id="password-box-validation">
+                        <span data-valmsg-replace="true" data-valmsg-for="Password" class="field-validation-valid"></span>
+                        
+                        <div style="color: #FF0000; display: none" id="CapslockError">
+                            <ul style="list-style-type: none">
+                                <li>*Capslock is on.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="editor-field" id="password-box">
+                        <input type="password" placeholder="Password" name="Password" id="Password" data-val-required="Password is required" data-val="true" />
+                    </div>
+                </div>
+                <div class="editor-chbox">
+                    <div class="remember-chBox">
+                        <input type="checkbox" value="true" name="Remember" id="Remember" data-val-required="The Remember field is required." data-val="true" class="custom-chBox" /><input type="hidden" value="false" name="Remember" />
+                        <label for="Remember"><span></span></label>
+                    </div>
+                    <span>Remember me </span>
+                </div>
+                <div class="editor-button">
+                    <button type="submit" class="submit-button" id="SubmitButton">
+                        <span class="toolbar-button-text">Log In</span></button>
+                </div>
+            </div>
+        </div>
+<input type="hidden" value="" name="Hash" id="Hash" /></form></div>
+<script type="text/javascript">
+    $(function () {
+        var isCapsOn = null;
+        $("#Password").bind("keyup", function (e) {
+            var keyCode = e.keyCode ? e.keyCode : e.which;
+            if (keyCode == 20) {
+                if (isCapsOn == true) {
+                    isCapsOn = false;
+                    $("#CapslockError").hide();
+                } else if (isCapsOn == false) {
+                    isCapsOn = true;
+                    $("#CapslockError").show();
+                }
+            }
+        });
+        $("#Password").bind("keypress", function (e) {
+            var s = String.fromCharCode(e.which);
+            if ((s.toUpperCase() === s &amp;&amp; s.toLowerCase() !== s &amp;&amp; !e.shiftKey) || (s.toUpperCase() !== s &amp;&amp; s.toLowerCase() === s &amp;&amp; e.shiftKey)) {
+                isCapsOn = true;
+                $("#CapslockError").show();
+            } else {
+                $("#CapslockError").hide();
+            }
+        });
+    });
+
+    $(function () {
+        if ('' == '') {
+            $('#Hash').val(window.location.hash);
+        }
+
+        $.validator.unobtrusive.parse("#SignInForm");
+
+        AutentificationValidation.ClonePassword("", "");
+        AutentificationValidation.HideValidation('True');
+        AutentificationValidation.BindValidation("#SubmitButton", ["#user-box", "#password-box"]);
+        AutentificationValidation.SetValidMsgPlaceholder();
+        bindEnterEvent();
+        bindSignInFormStyleForChrome();
+        bindPlaceholdersForIE();
+
+        $('.domains li').first().addClass('current-domain');
+        $('.domains li').last().addClass('last-domain');
+
+        initDomainValue();
+        bindDomainClickEvent();
+        bindDomainOutsideClickEvent();
+        bindRememberChboxClickEvent();
+    });
+</script>
+        
+        <div class="push">
+        </div>
+    </div>
+
+
+</body></html>
