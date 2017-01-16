@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11d82091-b2a8-4dda-913a-7f4eea333a93" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-    </list>
+    <list default="true" id="11d82091-b2a8-4dda-913a-7f4eea333a93" name="Default" comment="" />
     <ignored path="selTask5.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,7 +24,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="-2232">
               <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
               <folding />
             </state>
@@ -141,8 +139,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1011" />
-    <option name="y" value="5" />
+    <option name="x" value="791" />
     <option name="width" value="1066" />
     <option name="height" value="1040" />
   </component>
@@ -765,14 +762,14 @@
     <history-entry file="AppTest - 2017.01.16 at 11h 39m 19s.xml">
       <configuration name="AppTest" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="AppTest - 2017.01.16 at 12h 37m 35s.xml">
+      <configuration name="AppTest" configurationId="TestNG" />
+    </history-entry>
     <history-entry file="FrameTest - 2017.01.16 at 10h 29m 15s.xml">
       <configuration name="FrameTest" configurationId="TestNG" />
     </history-entry>
     <history-entry file="TestDDT - 2017.01.16 at 10h 28m 45s.xml">
       <configuration name="TestDDT" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="TestDDT_testDDT - 2016.12.13 at 15h 05m 18s.xml">
-      <configuration name="TestDDT.testDDT" configurationId="TestNG" />
     </history-entry>
     <history-entry file="TestDDT_testDDT - 2016.12.13 at 15h 08m 11s.xml">
       <configuration name="TestDDT.testDDT" configurationId="TestNG" />
@@ -788,7 +785,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1011" y="5" width="1066" height="1040" extended-state="0" />
+    <frame x="791" y="0" width="1066" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1092,7 +1089,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
+        <state relative-caret-position="-2232">
           <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
           <folding />
         </state>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suit">
+    <test name="test">
+        <classes>
+            <class name="com.selenideTask10.app.AlertsTest"/>
+            <class name="com.selenideTask10.app.AppTest"/>
+            <class name="com.selenideTask10.app.FrameTest"/>
+            <class name="com.selenideTask10.app.TestDDT"/>
+        </classes>
+    </test>
+</suite>
