@@ -20,7 +20,7 @@
         <jetty.version>9.3.11.v20160721</jetty.version>
         <allure.maven.version>2.5</allure.maven.version>
         <apache.poi.version>3.9</apache.poi.version>
-        <!--<suiteName>smoke_ui_tests.xml</suiteName>-->
+        <suiteName>mySuit.xml</suiteName>
         <generalUrl>http://ru.stackoverflow.com</generalUrl>
     </properties>
 
