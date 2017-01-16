@@ -27,7 +27,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="selTask10" target="1.5" />
+      <module name="selTask10" target="1.8" />
       <module name="selTask5" target="1.5" />
     </bytecodeTargetLevel>
   </component>

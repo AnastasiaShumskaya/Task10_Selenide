@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.switchTo;
@@ -29,7 +30,7 @@ public class FrameTest {
         $(INPUT).clear();
         $(INPUT).sendKeys(TEXT);
 
-        $(INPUT).shouldHave(Condition.text(TEXT));
+        $(INPUT).shouldHave(text(TEXT));
     }
 
 }
